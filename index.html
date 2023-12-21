@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
+    <title>Planilha de Gastos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1>Valor Financeiro</h1>
+        <p>"A estabilidade econômica é fundamental para o crescimento sustentável, fornecendo alicerces sólidos para o progresso social e oportunidades equitativas, pois uma economia saudável impulsiona o bem-estar de comunidades e nações."</p>
+    <ul class="menu-list">
+        <li><a href="#">Brasil</a></li>
+        <li><a href="#">Economia</a></li>
+        <li><a href="#">Política</a></li>
+        <li><a href="#">Empresas</a></li>
+        <li><a href="#">Mundo</a></li>
+        <li><a href="#">Agronegócios</a></li>
+        <li><a href="#">Carreira</a></li>
+        <li><a href="#">Legislação</a></li>
+    </ul>
+    </header>
+    <main id="principalfinanceiro">
+        <label for="salario">Salário:</label>
+        <input type="text" id="salario" class="input-field" placeholder="Digite seu salário mensal">
+        <button class="button" onclick="adicionarSalario()">Salário</button>
+
+        <div id="saldo-container">
+            <span>Saldo disponível:</span>
+            <span id="saldo">0</span>
+        </div>
+
+        <table class="tabeladeclasse">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" id="data" class="input-field" placeholder="Digite a data"></td>
+                    <td><input type="text" id="descricao" class="input-field" placeholder="Digite a descrição"></td>
+                    <td><input type="text" id="valor" class="input-field" placeholder="Digite o valor"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="button" onclick="adicionarGasto()">Calcular</button>
+        <button class="button" onclick="limparTela()">Limpar Tela</button>
+
+        <div id="quadrado-info" style="border: 1px solid #000; margin-top: 20px; padding: 10px; display: none;">
+            <h3>Informações Digitadas:</h3>
+            <p id="info-data"></p>
+            <p id="info-descricao"></p>
+            <p id="info-valor"></p>
+        </div>
+    </main>
+    <footer>
+        <p>Produzido por ADENILSON</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
